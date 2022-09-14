@@ -1,0 +1,193 @@
+
+/* ==================Обнулення стилів=================== */
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a {color: inherit;}
+
+a:link,
+a:visited {text-decoration: none;}
+
+a:hover {text-decoration: none;}
+
+img {vertical-align: top;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+
+body {line-height: 1;}
+
+/*  Larsseit Regular */
+/*  Lato Bold
+	Lato Regular
+	Lato Black */
+/* Roboto */
+
+/* ====================Підключення шрифтів====================== */
+
+/* підключив шрифт Lato (кирилиця) */
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/Lato-Black.woff2') format('woff2'), 
+		url('../fonts/lato/Lato-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/Lato-Bold.woff2') format('woff2'), 
+		url('../fonts/lato/Lato-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/lato/Lato-Regular.woff2') format('woff2'), 
+		url('../fonts/lato/Lato-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* підключив шрифт Larsseit (кирилиця) */
+@font-face {
+	font-family: 'Larsseit';
+	src: url('../fonts/larsseit/Larsseit-Regular.woff2') format('woff2'),
+		url('../fonts/larsseit/Larsseit-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* =============================Пріорітетність та вкладеність================================== */
+
+.storage .storage-test + p{
+	color: brown;
+}
+.storage > p{
+	color: blueviolet;
+}
+.storage {
+	color: darkgreen;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+
+/* ================================================================= */
+
+body {
+	font-family: 'Larsseit';
+	color: rgb(87, 87, 87);
+}
+
+li {
+	color: rgb(126, 116, 30);
+}
+a {
+	font-family: 'Lato';
+	color: rgb(11, 25, 151);
+}
+
+/* =======Тестую пріоритетність===================================================== */
+
+.processor .processor-test h3 {
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: orangered;
+	font-weight: 900;
+}
+.processor-test.processor-test-1 h3 {
+	color: blue;
+}
+
+h1,
+h2,
+h3{
+	font-family: 'Roboto';
+	font-weight: 700;
+	color: #000;
+}
+h3{
+	font-weight: 400;
+}
+
+
+
+/* ========================HEADER======================================== */
+
+/* ====так не працює=====
+	але li другого порядку пріорітетніше і не перезаписується
+ li.test-one {
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: red;
+	font-weight: 900;
+} */
+
+.title {
+	font-weight: 900;
+}
+/* ===використав (*) щоб переписати 
+	  посилання всередині li========*/
+.navigation-list>li *{
+	color: rgb(68, 62, 5);
+	font-weight: 700;
+}
+.navigation li {
+	font-family: 'Lato';
+	color: rgb(126, 116, 30);
+	font-weight: 400;
+}
+/* ======а так працює(.navigation-list>li та 
+		li.test-one рівнозначно пріорітетні)======= */
+li.test-one {
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: red;
+	font-weight: 900;
+}  
+/* =================================================================================== */
+.epigraph .test-two {
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: #000;
+	font-weight: 400;
+}
+.epigraph{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: rgb(0, 104, 0);
+	font-weight: 900;
+}
+
+
+
+
+/* ==============================MAIN=================================== */
+
