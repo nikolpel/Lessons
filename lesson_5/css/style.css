@@ -1,0 +1,272 @@
+/* 
+1) Використовуємо обнулення ! 
+2) Верстаємо статтю 
+3) Пропрацьовуємо селектори, комбінації та пріоритетність 
+4) Підключаємо 2 родини шрифтів, з кількома стилями (font-style, font-weight) різними методами. 
+5) Пропрацьовуємо УСІ властивості та їх значення з п'ятого уроку. 
+*/
+/* ====Шрифт з гугла потрібно підключати в самому верху(якщо після обнулення, то не працює)================ */
+/* ==========italic тільки 500================= */
+/* ==========перевірити який 400 і 700 буде нахилений================= */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,500&display=swap');
+/* ==================Обнулення стилів=================== */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {list-style: none;}
+a {color: inherit;}
+a:link, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+img {vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+body {line-height: 1;}
+
+/* ====================Підключення шрифтів(локальних)(можна підключати після обнулення)====================== */
+
+@font-face {
+	font-family: 'Merriweather';
+	src: url('../fonts/Merriweather-Bold.woff2') format('woff2'),
+		url('../fonts/Merriweather-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: url('../fonts/Merriweather-LightItalic.woff2') format('woff2'),
+		url('../fonts/Merriweather-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}  
+
+@font-face {
+	font-family: 'Merriweather';
+	src: url('../fonts/Merriweather-Light.woff2') format('woff2'),
+		url('../fonts/Merriweather-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+		url('../fonts/Merriweather-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ========================================================================= */
+body{
+	font-family: 'Merriweather';
+	font-size: 14px;
+	color: #2c2b2b;
+	line-height: 2;
+}
+h1{
+	font-size: 24px;
+	color: #000000;
+	font-weight: 700;
+}
+h2, h3, h4, h5{
+	font-size: 18px;
+	color: #000;
+	font-weight: 700;
+}
+a{
+	text-decoration: underline;
+	color: #080f79;
+}
+.container{
+	padding: 0px 200px;
+}
+.container h2 {
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+/* ============================== */
+.header {
+	margin: 0 0 30px 0;
+}
+
+.header__title {
+	padding: 0 0 10px 0;
+}
+.header__title h1{
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: overline;
+}
+
+
+.header__image img {
+	/* на картинку не працює, просто перевірив */
+	text-align: center;
+	padding: 0 0 0 100px;
+}
+/* ======================================== */
+
+.header__navig {
+	word-spacing: 20px;
+	text-indent: 20px;
+	text-transform: uppercase;
+	text-decoration: line-through;
+	font-weight: 700;
+	letter-spacing: 10px;
+	white-space: nowrap;
+}
+
+/* ============================ */
+
+.main {
+	margin: 0 0 30px 0;
+}
+/* ============================= */
+.epigraph {
+	margin: 0 0 30px 0;
+	text-indent: 20px;
+}
+.epigraph p{
+	padding: 0 0 20px 0;
+}
+/* ============================ */
+
+/* .content {} */
+
+/* ======================== */
+
+.about-satellite {
+	margin: 0 0 20px 0;
+}
+.about-satellite span{
+	font-weight: 700;
+	font-size: 16px;
+}
+.about-satellite span {
+	font-family: 'Merriweather';
+	font-weight: 700;
+	font-size: 16px;
+	font-style: normal;
+}
+/* звернення до span пріоритетніше,
+   italic наслідується */
+.about-satellite >p{
+	font-family: 'Rubik';
+	text-indent: 30px;
+	font-style: italic;
+	font-weight: 500;
+}
+
+
+.about-satellite-image {
+	width: 900px;
+}
+.about-satellite-image img{
+	/* типу відцентрував */
+	padding: 0 0 0 130px;
+}
+
+/* =========================== */
+
+.advantages {
+	margin: 0 0 30px 0;
+}
+
+.advantages-paragraph{
+	font-weight: 300;
+	font-style: italic;
+	font-size: 20px;
+}
+.advantages-paragraph+p {
+	font-size: 20px;
+	font-style: oblique;
+	font-weight: 400;
+}
+/* коли вказую oblique текст не нахиляє, 
+    а підтягує italic 300, дивно
+	наклонило текст коли закоментував italic 300*/
+.advantages-normal{
+	font-size: 20px;
+	font-weight: 400;
+	font-style: oblique;
+}
+.advantages-normal ~ p{
+	font-family: 'Rubik';
+	text-align: center;
+	color: #8f0101;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-weight: 500;
+	
+}
+
+/* ============================== */
+
+/* .specifications {} */
+
+/* italic 400 немає і підключився 500 */
+.specifications-list li {
+	font-family: 'Rubik';
+	text-decoration: underline;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.specifications-list>li {
+	font-family: 'Merriweather';
+	font-size: 16px;
+	font-weight: 300;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.specifications-text-one.text-one{
+	color: rgb(15, 135, 151);
+}
+.specifications-text {
+	color: rgb(100, 91, 5);
+}
+p.specifications-text-one{
+	text-transform: capitalize;
+	color: aqua;
+}
+.specifications-text-one{
+	color: rgb(15, 131, 25);
+}
+.specifications-text-one + p{
+	text-align: right;
+	color: #b90da2;
+}
+
+.specifications-image {
+	padding: 0 0 0 100px;
+	/* стало цікаво що буде
+	тому вказав менше ніж картинка */
+	width: 400px;
+}
+
+/* ============================== */
+
+.footer {}
