@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/* ==================Обнулення стилів=================== */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {list-style: none;}
+a {
+	color: inherit; 
+	text-decoration: none;
+}
+img {vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+body {line-height: 1;}
+
+/* =============================================================================== */
+body{
+	font-family: 'Lato';
+	color: #424551;
+	line-height: 1.6;
+}
+/* ========================= */
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+}
+/* =========================== */
+
+.header,
+.footer {
+	padding: 10px 0;
+	text-align: center;	
+	text-transform: uppercase;
+}
+
+/* ============= */
+
+.main {
+	padding: 120px 0 0;
+}
+/* .main__container {} */
+
+/* =============== */
+
+.about {
+	margin: 0 0 44px;
+}
+.about__title {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1.3;
+	color: #1E212C;
+	margin: 0 0 44px;
+}
+.about__text {
+	margin: 0 0 44px;
+}
+/* .about__list {} */
+.about__list p {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.5;
+	color: #1E212C;
+	margin: 0 0 24px;
+}
+.about__list li{
+	padding: 0 0 0 32px;
+}
+.about__list li:not(:last-child) {
+	margin: 0 0 4px;
+}
+.about__list li::before{
+	content: "";
+	background: url('../img/icon/icon.svg') 0 0 no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin: 0 16px 0 -32px;
+}
+
+/* ================ */
+
+/* .cody {} */
+.cody__title {
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #1E212C;
+	margin: 0 0 8px;
+}
+.cody__name {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 1.3;
+	color: #1E212C;
+	margin: 0 0 16px;
+}
+.cody__subtitle {
+	font-size: 20px;
+	line-height: 1.5;
+	color: #787A80;
+	margin: 0 0 32px;
+}
+.cody__statistics {
+	margin: 0 0 32px;
+}
+.cody__list {
+	font-weight: 700;
+}
+.cody__list li{
+	padding-left: 24px;
+}
+.cody__list li:not(:last-child) {
+	margin: 0 0 4px;
+}
+/* ======= */
+.cody__list li::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	margin: 0 9px 0 -24px;
+
+}
+.cody__list li:nth-child(1)::before{
+	background: url('../img/icon/star.svg');
+}
+.cody__list li:nth-child(2)::before {
+	background: url('../img/icon/play.svg');
+}
+.cody__list li:nth-child(3)::before {
+	background: url('../img/icon/mean.svg');
+	width: 14px;
+}
+/* ======= */
+/* .cody__text {} */
+
+/* ========================ПРАКТИКА====================== */
+.main__container.main__container-pr>*:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.main__container-pr>p:first-of-type {
+	font-size: 24px;
+	color: aqua;
+}
+
+.main__container-pr>p:last-of-type {
+	font-size: 24px;
+	color:brown;
+}
+/* ===================== */
+.about__text-pr{
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgb(128, 189, 116);
+}
+.about__parental:hover .about__text-pr{
+	visibility: visible;
+	opacity: 1;
+} 
+/* =================== */
+
+.about__list-pr li:first-child{
+	text-transform: uppercase;
+	text-decoration: underline;
+	color: #000;
+}
+.about__list-pr li:last-child {
+	text-transform: uppercase;
+	text-decoration: underline;
+	color: rgb(83, 63, 63);
+}
+.about__list-pr li:nth-child(3){
+	letter-spacing: 5px;
+	text-transform: capitalize;
+	background-color: rgb(172, 223, 138);
+}
+.about__list-pr li:not(:first-child){
+	font-size: 20px;
+	color: rgb(168, 95, 0);
+}
+.about__list-pr li:before{
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: red;
+	margin-right: 10px;
+}
+.about__list-pr li:hover:before{
+	content: "";
+	width: 20px;
+	height: 20px;
+}
+/* ================= */
+.cody__list-pr li:nth-child(odd){
+	color: brown;
+}
+.cody__list-pr li:nth-child(even){
+	color: darkorange;
+}
+.cody__list-pr li:hover{
+	display: inline-block;
+	border: 1px solid rgb(212, 198, 0);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: inset 1px 1px 5px #000;
+	padding: 0 10px;
+}
+/* ========================== */
+/* Розумію, що таке рішення не коректне, 
+   але так не скаче. */
+.button-box {
+	display: inline-block;
+	min-height: 60px;
+}
+
+.button-box:active {
+	padding-top: 4px;
+}
+
+.button {
+	display: inline-block;
+	font-size: 24px;
+	background-color: rgb(1, 5, 226);
+	padding: 5px 10px;
+	color: rgb(255, 255, 255);
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 0 #000;
+}
+
+.button:hover {
+	background-color: rgb(63, 65, 209);
+}
+
+.button:active {
+	box-shadow: 0 2px 0 #000;
+}
+
+.button:visited {
+	background-color: rgb(125, 70, 196);
+}
+
+.button:visited:hover {
+	background-color: rgb(143, 110, 187);
+}
+
+/* ============== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
