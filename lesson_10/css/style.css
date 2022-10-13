@@ -298,17 +298,24 @@ body{
 }
 
 /* .tabs-benefits {} */
-
-.tabs-benefits__item {
-	max-width: 307px;
+/* .tabs-benefits__list{
+	display: flex;
+}
+.tabs-benefits__item{
+	flex: 0 1 25%;
+} */
+.tabs-benefits__link {
+	display: block;
 	text-align: center;
 	padding: 10px 0;
 }
-.tabs-benefits__item:hover {
-	color: #FF3F3A;
+.tabs-benefits__link:hover {
 	border: 1px solid #FF3F3A;
 	border-radius: 4px;
 
+}
+.tabs-benefits__link:hover .tabs-benefits__text{
+	color: #FF3F3A;
 }
 .tabs-benefits__icon {
 	display: inline-block;
@@ -322,9 +329,7 @@ body{
 	line-height: 1.6;
 	color: #9A9CA5;
 }
-.tabs-benefits__text:hover {
-	color: #FF3F3A;
-}
+
 /* 
 .benefits__body {}
 
