@@ -39,7 +39,7 @@ body {line-height: 1;}
 }
 /* =========================== */
 .main{
-	background: url('../img/im.jpg') 0 0 / 100% auto no-repeat;
+	background: url('../img/im.jpg') 0 0 / cover no-repeat;
 }
 .himars__container{
 	position: relative;
