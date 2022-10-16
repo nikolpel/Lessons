@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/* ==================Обнулення стилів=================== */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {list-style: none;}
+a {
+	color: inherit; 
+	text-decoration: none;
+}
+img {vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+body {line-height: 1;}
+
+/* =============================================================================== */
+
+/* ========================= */
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+}
+/* =========================== */
+.main{
+	background: url('../img/im.jpg') 0 0 / 100% auto no-repeat;
+}
+.himars__container{
+	position: relative;
+	padding-top: 550px;
+}
+.himars__mlrs{
+	position: relative;
+	top: 90px;
+	left: 35px;	
+}
+.himars__mlrs:active .mlrs__rocket{
+	left: 1000px;
+	top: 20px;
+	transition: all 2s ease 0s;
+}
+.mlrs__rocket {
+	display: inline-block;
+	position: relative;
+	top: 100px;
+	left: -400px;
+	transform-origin: 0 0;
+	transform: rotate(-8deg);
+	z-index: -1;
+}
+.mlrs__image{
+	display: inline-block;
+	position: relative;
+	z-index: 5;
+}
+.mlrs__image:hover{
+	transform-origin: 45px 179px;
+	transform: rotate(-30deg);
+	transition: transform 1s ease 0s;
+}
+.mlrs__image::before {
+	content: "";
+	width: 24px;
+	height: 50px;
+	display: inline-block;
+	background-color: #54583B;
+	position: absolute;
+	top: 140px;
+	left: 320px;
+	border-radius: 6px;
+	z-index: -1;
+}
+.mlrs__image:hover::before{
+	height: 200px;
+	transform-origin: 0 0;
+	transform: rotate(12deg);
+	transition: transform 1s ease 0s, height 0.9s ease 0s ;
+}
+.mlrs__image::after {
+	content: "";
+	background: url('../img/support.png') 0 0 no-repeat;
+	display: inline-block;
+	width: 145px;
+	height: 90px;
+	position: absolute;
+	top: -10px;
+	left: 470px;
+}
+.mlrs__hoist{
+	position: relative;
+	bottom: 69px;
+	left: 40px;
+	z-index: 1;
+}
+
+.himars__frame{
+	position: relative;
+}
+.frame__image {
+	/* width: 450px; */
+	position: relative; 
+	top: 10px;
+	left: 2px;
+	z-index: 2;
+}
+.frame__image::after{
+	content: "";
+	background: url('../img/battery.png') 0 0 no-repeat;
+	width: 135px;
+	height: 80px;
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 444px;
+}
+.frame__box-1{
+	position: absolute;
+	top: -80px;
+	left: 564px;
+}
+.frame__box-2{
+	position: absolute;
+	top: -126px;
+	left: 657px;
+}
+.frame__gas-tank{
+	position: absolute;
+	top: 30px;
+	left: 580px;
+}
+
+.frame__wheel{
+	position: relative;
+}
+.wheel__1{
+	position: absolute;
+	top: -54px;
+	left: 83px;
+}
+.wheel__2{
+	position: absolute;
+	top: -54px;
+	left: 265px;
+}
+
+.himars__cabin {
+	display: inline-block;
+	position: relative;
+	left: 646px;
+	top: -275px;
+	
+}
+.cabin__image{
+	display: inline-block;
+	position: relative;
+	left: 100px;
+	max-width: 300px;
+}
+.cabin__image::before{
+	content: "";
+	background: url('../img/radar.png') 0 0 no-repeat;
+	display: inline-block;
+	position: absolute;
+	top: -110px;
+	left: -100px;
+	width: 118px;
+	height: 174px;
+}
+.cabin__image::after {
+	content: "";
+	background: url('../img/wing.png') 0 0 no-repeat;
+	display: inline-block;
+	position: absolute;
+	top: 162px;
+	left: -12px;
+	width: 255px;
+	height: 122px;
+}
+.cabin__wheel{
+	display: inline-block;
+	position: relative;
+	top: 208px;
+	left: -147px;
+}
