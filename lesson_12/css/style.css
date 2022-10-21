@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/* ==================Обнулення стилів=================== */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+li {list-style: none;}
+a {
+	color: inherit; 
+	text-decoration: none;
+}
+img {vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input, button, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+body {line-height: 1;}
+html,
+body {
+	height: 100%;
+}
+
+/* =============================================================================== */
+
+/* ========================= */
+
+[class*="__container"]{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+[class*="__item"]:hover {
+	transform: translate(10px, 0) scale(1.2, 1.2);
+	z-index: 5;
+}
+/* =========================== */
+.himars {
+	background: url('../img/im.jpg') 100% 50% / cover no-repeat;
+	height: 1000px;
+}
+
+.himars__container{
+	position: relative;
+}
+.himars__car {
+	position: absolute;
+	top: 580px;
+	left: -0px;
+}
+.car-himars{
+	position: relative;
+}
+
+/* ============================================= */
+.car-himars__mlrs {
+	position: absolute;
+	top: 0px;
+	left: 26px;
+	width: 600px;
+	height: 216px;
+}
+.car-himars__mlrs:hover .mlrs__body{
+	transform: rotate(334deg);
+	transform-origin: 48px 187px;
+}
+.car-himars__mlrs:active .mlrs__item-2 {
+	top: 0px;
+	left: 1075px;
+	transform: rotate(360deg);
+	transition: all 1.2s ease 0s;
+	z-index: 5;
+}
+/* .mlrs {} */
+
+.mlrs__body {
+	position: relative;
+}
+
+.mlrs__item-1 {
+	position: absolute;
+	top: -11px;
+	left: 468px;
+}
+.mlrs__item-1:hover{
+	transform: translate(0, 0) scale(1, 1);
+}
+.mlrs__item-2 {
+	position: absolute;
+	top: 94px;
+	left: 175px;
+	transform: rotate(352deg);
+}
+.mlrs__item-3:hover {
+	transform: translate(0, 0) scale(1, 1);
+}
+.mlrs__item-3 {
+	position: absolute;
+}
+.mlrs__item-3:hover {
+	transform: translate(0, 0) scale(1, 1);
+}
+/* =============================================== */
+.car-himars__hoist {
+	position: absolute;
+	top: 148px;
+	left: 66px;
+}
+.car-himars__hoist:hover {
+	transform: translate(10px, 0) scale(1.2, 1.2);
+	z-index: 5;
+}
+.car-himars__hoist:active{
+	transform: translate(10%, -10%) rotate(90deg) scale(2);
+}
+.car-himars__frame {
+	position: absolute;
+	top: 216px;
+	left: 0;
+}
+.car-himars__frame:hover {
+	transform: translate(10px, 0) scale(1.2, 1.2);
+	z-index: 5;
+}
+.car-himars__frame:active{
+	transform: translate(20%, 20%) rotate(-180deg) scale(3);
+}
+/* ================================================ */
+.car-himars__boxes {
+	position: absolute;
+	top: 153px;
+	left: 546px;
+	z-index: 2;
+}
+
+/* .box {} */
+
+.box__body {
+	position: relative;
+}
+
+.box__item-1 {
+	position: absolute;
+	top: -14px;
+	left: 24px;
+}
+
+.box__item-2 {
+	position: absolute;
+	top: -60px;
+	left: 119px;
+}
+
+.box__item-3 {
+	position: absolute;
+	top: 68px;
+	left: -101px;
+}
+
+.box__item-4 {
+	position: absolute;
+	top: 84px;
+	left: 42px;
+}
+
+/* ================================================= */
+.car-himars__cabin {
+	position: absolute;
+	top: 38px;
+	left: 750px;
+}
+
+/* .cabin {} */
+.cabin__body {
+	position: relative;
+}
+.cabin__body::before{
+	content: "";
+	background: url('../img/radar.png') 0 0 no-repeat;
+	position: absolute;
+	top: -110px;
+	left: -94px;
+	width: 125px;
+	height: 175px;
+	z-index: 2;
+}
+.cabin__body:hover::before {
+	transform: translate(10px, 0) scale(1.2, 1.2);
+	z-index: 5;
+}
+.cabin__item-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cabin__item-2 {
+	position: absolute;
+	top: 161px;
+	left: -13px;
+}
+
+/* ====================================================== */
+.car-himars__wheels {
+	position: absolute;
+	top: 245px;
+	left: 84px;
+}
+
+/* .wheel {} */
+
+.wheel__body {
+	position: relative;
+}
+
+.wheel__item-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.wheel__item-2 {
+	position: absolute;
+	top: 0;
+	left: 183px;
+}
+
+.wheel__item-3 {
+	position: absolute;
+	top: 0;
+	left: 678px;
+}
+/* ================================================= */
+
