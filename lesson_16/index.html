@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson 16</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header"></header>
+			<main class="page">
+				<section class="feedback">
+					<div class="feedback__container">
+						<div class="feedback__form form-feedback">
+							<div class="form-feedback__caption caption">
+								<h3 class="caption__sub-title">Any questions?</h3>
+								<h2 class="caption__title">Drop us a line</h2>
+							</div>
+							<form class="form-feedback__body body-form" action="#" method="post" enctype="multipart/form-data">
+								<div class="body-form__item body-form__item-1">
+									<label for="name-01">First Name*</label>
+									<input id="name-01" type="text" name="first-fame" required placeholder="Your first name">
+								</div>
+								<div class="body-form__item body-form__item-2">
+									<label for="name-02">Last Name*</label>
+									<input id="name-02" type="text" name="last-name" required placeholder="Your last name">
+								</div>
+								<div class="body-form__item body-form__item-3">
+									<label for="mail-01">Email*</label>
+									<input id="mail-01" type="email" name="mail" required placeholder="Your working email">
+								</div>
+								<div class="body-form__item body-form__item-4">
+									<label for="phone-01">Phone</label>
+									<input id="phone-01" type="tel" name="phone" placeholder="Your phone number">
+								</div>
+								<div class="body-form__item body-form__item-5">
+									<label for="message-01">Message*</label>
+									<textarea name="message" id="message-01" required placeholder="Your message"></textarea>
+								</div>
+								<div class="body-form__item body-form__item-6">
+									<input class="body-form__item-6__input" id="agree-01" type="checkbox" name="agree">
+									<label class="body-form__item-6__label" for="agree-01">
+										<span>I agree to receive communications from Createx Online School</span>
+									</label>
+									
+								</div>
+								<div class="body-form__item body-form__item-7">
+									<button type="submit">Send message</button>
+								</div>
+							</form>
+						</div>
+						<div class="feedback__image">
+							<img src="img/illustration.svg" alt="Ілюстрація">
+						</div>
+					</div>
+				</section>
+				<section class="practic">
+					<div class="practic__container">
+						<form action="#" class="practic__form form" method="post" enctype="multipart/form-data">
+							<div class="form__line">
+								<input class="form__input" type="text" id="text-01" placeholder="Вкажіть ваше ім'я" name="first-name">
+								<label class="form__label" for="text-01">Ім'я</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input" type="text" id="text-02" placeholder="Вкажіть ваше прізвище" name="last-name">
+								<label class="form__label" for="text-02">Прізвище</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input" type="text" id="login" placeholder="Вкажіть ваш логін" name="login">
+								<label class="form__label" for="login">Логін</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input" type="password" id="pass" placeholder="Вкажіть ваш пароль" name="pass">
+								<label class="form__label" for="pass">Пароль</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input" type="date" id="d-born" placeholder="Вкажіть вашу дату народження" name="born-date">
+								<label class="form__label" for="d-born">Дата народження</label>
+							</div>
+							<div class="form__text">Яким транспртом ви володієте?</div>
+							<div class="form__line">
+								<input class="form__input input-checkbox" type="checkbox" id="item-1" name="car">
+								<label class="form__label label-checkbox" for="item-1">Авто</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input input-checkbox" type="checkbox" id="item-2" name="bike">
+								<label class="form__label label-checkbox" for="item-2">Моцик</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input input-checkbox" type="checkbox" id="item-3" name="bicycle">
+								<label class="form__label label-checkbox" for="item-3">Велик</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input input-radio" type="radio" id="drink-01" name="drink" value="vine">
+								<label class="form__label label-radio" for="drink-01">Вино</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input input-radio" type="radio" id="drink-02" name="drink" value="beer">
+								<label class="form__label label-radio" for="drink-02">Пиво</label>
+							</div>
+							<div class="form__line">
+								<input class="form__input input-radio" type="radio" id="drink-03" name="drink" value="whiskey">
+								<label class="form__label label-radio" for="drink-03">Віскі</label>
+							</div>
+							<button class="form__button-1 button" type="reset">Підрегулювати</button>
+							<button class="form__button-2 button" type="submit">Відправити</button> 
+						</form>
+					</div>
+				</section>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>
