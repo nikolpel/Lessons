@@ -50,7 +50,7 @@ body{
 	border: 1px solid #FF3F3A;
 	transition: all 0.3s ease 0s;
 }
-.buttot--border:hover{
+.button--border:hover{
 	background: #F75E05;
 	color: #fff;
 }
